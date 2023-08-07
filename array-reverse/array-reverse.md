@@ -13,22 +13,6 @@ input: [1,2,3] ==> output [3,2,1]
 
 ### Algorithm:
 In order to reverse the elements of the array we need to make a backward loop from the last index to the first one and assaign the last index to another array to be the first index of it and so on until the first index of the original array becomes the last index of the revered array
-
-### PseduoCode:
-
-```
-function int[] reverseArray(int[] arr) {
-    //declare counter for index ;
-    int counter =0;
-    //initilaze an empty array with the length of the original array
-    int[] reversed = new int[arr.length];
-    //loop backward in the original array
-    for(int i = arr.length-1;i>=0;i--) {
-        reversed[counter] = arr[i];
-    }
-    return reversed;
-}
-```
 ## Solution
 ### Code:
 ```
