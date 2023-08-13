@@ -38,7 +38,7 @@
     }
 ```
 
-Link -> [code](./app/bin/main/array/binary/search/App.class)
+Link -> [code](./app/src/main/java/array/binary/search/App.java)
 
 ### Test
 
@@ -61,7 +61,7 @@ Link -> [code](./app/bin/main/array/binary/search/App.class)
     }
 ```
 
-Link -> [Test](./app/bin/test/array/binary/search/AppTest.class)
+Link -> [Test](./app/src/test/java/array/binary/search/AppTest.java)
 
 
 ## How to run the code 
