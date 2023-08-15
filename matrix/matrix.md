@@ -1,7 +1,7 @@
 ## Matrix
 
 ## WhiteBoard
-![Matrix](./matrix.png)
+![Matrix](./matrix.PNG)
 
 ## Approach & Efficiency
 
