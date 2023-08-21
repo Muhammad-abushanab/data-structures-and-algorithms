@@ -17,8 +17,12 @@ public class App {
             System.out.println("Hello to Linked List program");
             System.out.println("1- Insert");
             System.out.println("2- Include");
-            System.out.println("3- Print");
-            System.out.println("4- Exit");
+            System.out.println("3- Insert Before");
+            System.out.println("4- Insert After");
+            System.out.println("5- Delete");
+            System.out.println("6- Append");
+            System.out.println("7- Print");
+            System.out.println("8- Exit");
             System.out.print("Enter your choice: ");
 
             choice = scanner.nextInt();
@@ -41,16 +45,42 @@ public class App {
                     }
                     break;
                 case 3:
+                    System.out.print("Enter value to insert: ");
+                    int valueToInsertBefore = scanner.nextInt();
+                    System.out.print("Enter value before which to insert: ");
+                    int beforeValue = scanner.nextInt();
+                    linkedList.insertBefore(valueToInsertBefore, beforeValue);
+                    break;
+
+                case 4:
+                    System.out.print("Enter value to insert: ");
+                    int valueToInsert = scanner.nextInt();
+                    System.out.print("Enter value after which to insert: ");
+                    int afterValue = scanner.nextInt();
+                    linkedList.insertAfter(valueToInsert, afterValue);
+                    break;
+
+                case 5:
+                    System.out.println("Enter value to delete");
+                    int deleteValue = scanner.nextInt();
+                    linkedList.delete(deleteValue);
+                    break;
+                case 6:
+                    System.out.println("Enter value to append");
+                    int valueAppend = scanner.nextInt();
+                    linkedList.append(valueAppend);
+                    break;
+                case 7:
                     System.out.println("Linked List: " + linkedList);
                     break;
-                case 4:
+                case 8:
                     System.out.println("Exiting...");
                     break;
                 default:
                     System.out.println("Invalid choice");
                     break;
             }
-        } while (choice != 4);
+        } while (choice != 8);
 
         scanner.close();
     }
