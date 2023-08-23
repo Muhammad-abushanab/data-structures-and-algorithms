@@ -21,8 +21,9 @@ public class App {
             System.out.println("4- Insert After");
             System.out.println("5- Delete");
             System.out.println("6- Append");
-            System.out.println("7- Print");
-            System.out.println("8- Exit");
+            System.out.println("7- Kth From End");
+            System.out.println("8- Print");
+            System.out.println("9- Exit");
             System.out.print("Enter your choice: ");
 
             choice = scanner.nextInt();
@@ -71,16 +72,27 @@ public class App {
                     linkedList.append(valueAppend);
                     break;
                 case 7:
-                    System.out.println("Linked List: " + linkedList);
+                    System.out.println("Enter K value");
+                    int kValue = scanner.nextInt();
+                    try {
+                        System.out.println("Value is " + linkedList.kthFromEnd(kValue));
+                    } catch (IllegalArgumentException e) {
+                        System.out.println("An error occurred: " + e.getMessage());
+                    }catch (NullPointerException e) {
+                        System.out.println("A Error occurred: " + e.getMessage() + "\nHint : This LinkedList is zeroBased size");
+                    }
                     break;
                 case 8:
+                    System.out.println("Linked List: " + linkedList);
+                    break;
+                case 9:
                     System.out.println("Exiting...");
                     break;
                 default:
                     System.out.println("Invalid choice");
                     break;
             }
-        } while (choice != 8);
+        } while (choice != 9);
 
         scanner.close();
     }

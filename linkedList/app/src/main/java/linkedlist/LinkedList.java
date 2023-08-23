@@ -92,6 +92,38 @@ public class LinkedList {
         }
         System.out.println("Value does not exist");
     }
+    public int kthFromEnd(int k) {
+        if (head == null || k < 0) {
+            throw new IllegalArgumentException("Invalid input");
+        }
+        int size = 0;
+        Node current = head;
+
+        while (current != null) {
+            size++;
+            current = current.next;
+        }
+
+        if (k == size) {
+            throw new NullPointerException("k is equal to the list size");
+        }
+        Node p1 = head;
+        Node p2 = head;
+
+        for (int i = 0; i < k; i++) {
+            if (p2 == null) {
+                throw new IllegalArgumentException("k is larger than the list size");
+            }
+            p2 = p2.next;
+        }
+
+        while (p2.next != null) {
+            p1 = p1.next;
+            p2 = p2.next;
+        }
+
+        return p1.value;
+    }
     public String toString(){
         String result = "";
         Node current = head;

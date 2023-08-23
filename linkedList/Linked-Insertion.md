@@ -13,6 +13,11 @@ This challenge is to implement more methods on the linked list data structure wh
 - **insert before method**:Traverse the linked list until a node with the value specified is found If the value is not found, throw an exception Otherwise, create a new node with the given new value Set the next pointer of the new node to the node with the value specified Set the next pointer of the previous node to the new node.
 - **insert after method**: Traverse the linked list until a node with the value specified is found If the value is not found, throw an exception Otherwise, create a new node with the given new value Set the next pointer of the new node to the next node of the node with the value specified Set the next pointer of the node with the value specified to the new node
 
+## Big o
+1. **append method**: Time Complexity: O(n)
+2. **insert before method**: Time Complexity: O(n)
+3. **insert after method**: Time Complexity: O(n)
+
 ## Solution
 
 ### Code 
