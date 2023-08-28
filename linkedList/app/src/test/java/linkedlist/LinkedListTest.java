@@ -136,4 +136,41 @@ public class LinkedListTest {
         testLinkedList.insert(15);
         assertThrows(NullPointerException.class,() -> testLinkedList.kthFromEnd(1));
     }
+    @Test void whenBothLinkedListHaveMultipleNodes_ShouldMergeTheNodes(){
+        LinkedList list1 = new LinkedList();
+        list1.append(1);
+        list1.append(3);
+        list1.append(2);
+
+        LinkedList list2 = new LinkedList();
+        list2.append(5);
+        list2.append(9);
+        list2.append(4);
+
+        LinkedList linkedList = new LinkedList();
+        LinkedList zippedList = linkedList.zipLists(list1, list2);
+        assertEquals("{ 1 } -> { 5 } -> { 3 } -> { 9 } -> { 2 } -> { 4 } -> NULL",zippedList.toString());
+    }
+    @Test void whenOneOfTheLinkedListHasOnlyOneNode_ShouldMergeThem(){
+        LinkedList list1 = new LinkedList();
+        list1.append(1);
+
+        LinkedList list2 = new LinkedList();
+        list2.append(5);
+        list2.append(9);
+        list2.append(4);
+
+        LinkedList linkedList = new LinkedList();
+        LinkedList zippedList = linkedList.zipLists(list1, list2);
+        assertEquals("{ 1 } -> { 5 } -> { 9 } -> { 4 } -> NULL",zippedList.toString());
+    }
+    @Test void whenBothLinkedListIsNull_ShouldReturnNull(){
+        LinkedList list1 = new LinkedList();
+        LinkedList list2 = new LinkedList();
+
+        LinkedList linkedList = new LinkedList();
+        LinkedList zippedList = linkedList.zipLists(list1, list2);
+        assertEquals("NULL",zippedList.toString());
+    }
+
 }
