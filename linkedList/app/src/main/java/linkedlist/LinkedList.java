@@ -124,6 +124,33 @@ public class LinkedList {
 
         return p1.value;
     }
+
+    public  LinkedList zipLists(LinkedList list1, LinkedList list2) {
+        LinkedList zipList = new LinkedList();
+
+        Node current1 = list1.head;
+        Node current2 = list2.head;
+
+        while (current1 != null && current2 != null) {
+            zipList.append(current1.value);
+            zipList.append(current2.value);
+            current1 = current1.next;
+            current2 = current2.next;
+        }
+
+        while (current1 != null) {
+            zipList.append(current1.value);
+            current1 = current1.next;
+        }
+
+        while (current2 != null) {
+            zipList.append(current2.value);
+            current2 = current2.next;
+        }
+
+        return zipList;
+    }
+
     public String toString(){
         String result = "";
         Node current = head;
