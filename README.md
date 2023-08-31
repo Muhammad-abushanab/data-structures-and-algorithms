@@ -10,5 +10,6 @@
 |Linked List Insertion           | [LinkedList-Insertion](./linkedList/Linked-Insertion.md)
 |Linked List Insertion           | [LinkedList K From End](./linkedList/kFromEnd.md)
 |Linked List Insertion           | [LinkedListZip](./linkedList/ZipList.md)
+|Linked List Insertion           | [LinkedListZip](./Stack-Queue/StackAndQueue.md)
 
 

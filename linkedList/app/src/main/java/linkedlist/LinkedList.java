@@ -1,5 +1,10 @@
 package linkedlist;
 
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.List;
+
 public class LinkedList {
     Node head;
     public LinkedList(){
@@ -149,6 +154,21 @@ public class LinkedList {
         }
 
         return zipList;
+    }
+    public void reverse() {
+        Node prev = null;
+        Node current = head;
+        Node next = null;
+
+        while (current != null) {
+            next = current.next;
+            current.next = prev;
+
+            prev = current;
+            current = next;
+        }
+
+        head = prev;
     }
 
     public String toString(){
