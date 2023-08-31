@@ -172,5 +172,13 @@ public class LinkedListTest {
         LinkedList zippedList = linkedList.zipLists(list1, list2);
         assertEquals("NULL",zippedList.toString());
     }
-
+ @Test
+    void givenLinkedList_ReturnIt_InReverseOrder(){
+     LinkedList list2 = new LinkedList();
+     list2.insert(5);
+     list2.insert(9);
+     list2.insert(4);
+     list2.reverse();
+     assertEquals("{ 5 } -> { 9 } -> { 4 } -> NULL",list2.toString());
+ }
 }
