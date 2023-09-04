@@ -7,10 +7,12 @@ import java.util.List;
 
 public class LinkedList {
     Node head;
-    public LinkedList(){
+
+    public LinkedList() {
         this.head = null;
     }
-    public void insert(int value){
+
+    public void insert(int value) {
         Node addNode = new Node(value);
         addNode.next = head;
         head = addNode;
@@ -19,25 +21,27 @@ public class LinkedList {
     public boolean includes(int value) {
         Node current = head;
         while (current != null) {
-            if(current.value == value) {
+            if (current.value == value) {
                 return true;
             }
             current = current.next;
         }
         return false;
     }
-    public void append(int value){
+
+    public void append(int value) {
         Node addNode = new Node(value);
-        if(head == null) {
+        if (head == null) {
             head = addNode;
             return;
         }
         Node current = head;
-        while(current.next != null) {
+        while (current.next != null) {
             current = current.next;
         }
         current.next = addNode;
     }
+
     public void insertAfter(int value, int after) {
         Node current = head;
         while (current != null) {
@@ -49,8 +53,9 @@ public class LinkedList {
             }
             current = current.next;
         }
-        System.out.println("Could not insert maybe the " + after +" does not exist try include");
+        System.out.println("Could not insert maybe the " + after + " does not exist try include");
     }
+
     public void insertBefore(int value, int before) {
         if (head == null) {
             System.out.println("Cannot insert before empty list");
@@ -74,8 +79,9 @@ public class LinkedList {
             }
             current = current.next;
         }
-        System.out.println("Could not insert maybe the " + before +" does not exist try include");
+        System.out.println("Could not insert maybe the " + before + " does not exist try include");
     }
+
     public void delete(int value) {
         if (head == null) {
             System.out.println("List is empty");
@@ -97,6 +103,7 @@ public class LinkedList {
         }
         System.out.println("Value does not exist");
     }
+
     public int kthFromEnd(int k) {
         if (head == null || k < 0) {
             throw new IllegalArgumentException("Invalid input");
@@ -130,7 +137,7 @@ public class LinkedList {
         return p1.value;
     }
 
-    public  LinkedList zipLists(LinkedList list1, LinkedList list2) {
+    public LinkedList zipLists(LinkedList list1, LinkedList list2) {
         LinkedList zipList = new LinkedList();
 
         Node current1 = list1.head;
@@ -155,6 +162,7 @@ public class LinkedList {
 
         return zipList;
     }
+
     public void reverse() {
         Node prev = null;
         Node current = head;
@@ -171,7 +179,49 @@ public class LinkedList {
         head = prev;
     }
 
-    public String toString(){
+    public void rotateKthNode(int k) {
+        Node current = head;
+        if (head == null) return;
+        int count = 1;
+        while (count < k && current != null) {
+            current = current.next;
+            count++;
+        }
+        if (current == null)
+            return;
+
+        Node kth = current;
+
+        while (current.next != null) {
+            current = current.next;
+        }
+        current.next = head;
+        head = kth.next;
+        kth.next = null;
+
+    }
+
+    public void deleteFromMiddle() {
+        if (head == null || head.next == null) return;
+        int size = 0;
+        Node temp = head;
+        while (temp != null) {
+            temp = temp.next;
+            size++;
+        }
+
+        size = size / 2;
+        temp = head;
+        while (size - 1 > 0) {
+            temp = temp.next;
+            size--;
+        }
+        Node temp2 = temp.next;
+        temp.next = temp.next.next;
+        temp2.next = null;
+    }
+
+    public String toString() {
         String result = "";
         Node current = head;
         while (current != null) {

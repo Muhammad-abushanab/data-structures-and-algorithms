@@ -40,6 +40,7 @@ public class LinkedListTest {
         assertEquals("{ 25 } -> { 8 } -> { 16 } -> { 15 } -> NULL", testLinkedList.toString());
     }
 
+
     @Test
     void appendOnEmpty_LinkedList_ReturnLinkedListWith_Value_HeadNode() {
         LinkedList testLinkedList = new LinkedList();
@@ -180,5 +181,34 @@ public class LinkedListTest {
      list2.insert(4);
      list2.reverse();
      assertEquals("{ 5 } -> { 9 } -> { 4 } -> NULL",list2.toString());
+ }
+ @Test
+    void givenALinkedList_RotateKth() {
+     LinkedList testLinkedList = new LinkedList();
+     testLinkedList.insert(20);
+     testLinkedList.insert(25);
+     testLinkedList.insert(30);
+     testLinkedList.insert(45); // 45 -> 30 -> 25 -> 20
+     testLinkedList.rotateKthNode(2);
+        assertEquals("{ 25 } -> { 20 } -> { 45 } -> { 30 } -> NULL",testLinkedList.toString());
+ }
+ @Test void deleteFromMiddle(){
+     LinkedList testLinkedList = new LinkedList();
+     testLinkedList.insert(20);
+     testLinkedList.insert(25);
+     testLinkedList.insert(30);
+     testLinkedList.insert(45); // 45 -> 30 -> 25 -> 20
+     testLinkedList.deleteFromMiddle();
+     assertEquals("{ 45 } -> { 30 } -> { 20 } -> NULL",testLinkedList.toString());
+     LinkedList testLinkedList2 = new LinkedList();
+     testLinkedList2.insert(20);
+     testLinkedList2.deleteFromMiddle();
+     assertEquals("{ 20 } -> NULL",testLinkedList2.toString());
+     LinkedList testLinkedList3 = new LinkedList();
+     testLinkedList3.insert(20);
+     testLinkedList3.insert(25);
+     testLinkedList3.insert(30);
+     testLinkedList3.deleteFromMiddle();
+     assertEquals("{ 30 } -> { 20 } -> NULL",testLinkedList3.toString());
  }
 }
