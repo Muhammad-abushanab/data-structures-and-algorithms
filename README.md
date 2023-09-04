@@ -11,5 +11,6 @@
 |Linked List Insertion           | [LinkedList K From End](./linkedList/kFromEnd.md)
 |Linked List Insertion           | [LinkedListZip](./linkedList/ZipList.md)
 |Stack and Queue           | [Stack And Queue](./Stack-Queue/StackAndQueue.md)
+|Pesudo Queue         | [Stack And Queue](./Stack-Queue/PseduQueue.md)
 
 

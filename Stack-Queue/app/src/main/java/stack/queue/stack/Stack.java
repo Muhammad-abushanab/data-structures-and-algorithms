@@ -34,6 +34,18 @@ public class Stack<T> {
     public boolean isEmpty() {
         return top == null;
     }
+    public int size() throws Exception {
+        if(isEmpty()){
+            throw new Exception("Stack is empty");
+        }
+        int size = 0;
+        Node<T> current = top;
+        while(current != null){
+            size++;
+            current = current.next;
+        }
+        return size;
+    }
     @Override
     public String toString() {
         Node<T> current = top;
