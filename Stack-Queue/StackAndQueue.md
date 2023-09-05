@@ -11,7 +11,7 @@ A **stack** is a linear data structure that follows the Last-In-First-Out (LIFO)
 
 ### WhiteBoard
 
-![Stack](./images/stack.PNG)
+![Stack](./images/stack2.PNG)
 
 #### Approach & Efficiency
 
