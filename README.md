@@ -12,5 +12,6 @@
 |Linked List Insertion           | [LinkedListZip](./linkedList/ZipList.md)
 |Stack and Queue           | [Stack And Queue](./Stack-Queue/StackAndQueue.md)
 |Pesudo Queue         | [Pesudo Queue](./Stack-Queue/PseduQueue.md)
+|Animal shelter         | [Animal shelter](./Stack-Queue/AnimalShelter.md)
 
 
