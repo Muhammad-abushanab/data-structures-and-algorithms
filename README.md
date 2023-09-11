@@ -13,5 +13,6 @@
 |Stack and Queue           | [Stack And Queue](./Stack-Queue/StackAndQueue.md)
 |Pesudo Queue         | [Pesudo Queue](./Stack-Queue/PseduQueue.md)
 |Animal shelter         | [Animal shelter](./Stack-Queue/AnimalShelter.md)
+|Valid Bracket         | [Valid Bracket](./Stack-Queue/ValidBracket.md)
 
 
