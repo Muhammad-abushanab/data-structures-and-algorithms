@@ -8,33 +8,36 @@ import stack.queue.anmials.Cat;
 import stack.queue.anmials.Dog;
 import stack.queue.queue.Queue;
 import stack.queue.stack.Stack;
+import stack.queue.stack.ValidBracket;
 
 public class App {
 
     public static void main(String[] args) {
         // Stack
-        Stack<Integer> stack = new Stack<>();
-        stack.isEmpty();
-        System.out.println(stack.peek());
-        stack.push(4);
-        stack.push(45);
-        stack.push(15);
-        System.out.println(stack.peek());
-        System.out.println("Stack : " + stack);
-        //Queue
-
-        Queue<Integer> queue = new Queue<>();
-        queue.enqueue(4);
-        queue.enqueue(6);
-        queue.enqueue(45);
-        System.out.println("Queue : " + queue);
-
-        AnimalShelter shelter = new AnimalShelter();
-        Cat cat = new Cat("Harry");
-        Dog dog = new Dog("Rick");
-        shelter.enqueue(dog);
-        shelter.enqueue(cat);
-        shelter.dequeue("Cat");
-        System.out.println(shelter.getShelter());
+//        Stack<Integer> stack = new Stack<>();
+//        stack.isEmpty();
+//        System.out.println(stack.peek());
+//        stack.push(4);
+//        stack.push(45);
+//        stack.push(15);
+//        System.out.println(stack.peek());
+//        System.out.println("Stack : " + stack);
+//        //Queue
+//
+//        Queue<Integer> queue = new Queue<>();
+//        queue.enqueue(4);
+//        queue.enqueue(6);
+//        queue.enqueue(45);
+//        System.out.println("Queue : " + queue);
+//
+//        AnimalShelter shelter = new AnimalShelter();
+//        Cat cat = new Cat("Harry");
+//        Dog dog = new Dog("Rick");
+//        shelter.enqueue(dog);
+//        shelter.enqueue(cat);
+//        shelter.dequeue("Cat");
+//        System.out.println(shelter.getShelter());
+        ValidBracket v = new ValidBracket();
+        System.out.println(v.validBracket("{[(1564)]}"));
     }
 }
