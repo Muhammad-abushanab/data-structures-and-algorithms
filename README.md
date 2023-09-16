@@ -14,5 +14,6 @@
 |Pesudo Queue         | [Pesudo Queue](./Stack-Queue/PseduQueue.md)
 |Animal shelter         | [Animal shelter](./Stack-Queue/AnimalShelter.md)
 |Valid Bracket         | [Valid Bracket](./Stack-Queue/ValidBracket.md)
+|Tree         | [Tree](./Tree/BinaryTree.md)
 
 
