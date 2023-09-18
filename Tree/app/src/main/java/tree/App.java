@@ -26,5 +26,6 @@ public class App {
 //        System.out.println(bst.postOrderTraverse(bst.getRoot(),travel).toString());
         travel.clear();
         System.out.println(" In Order : " + bst.inOrderTraverse(bst.getRoot(),travel).toString()); // left >> root >> right
+        System.out.println("Maximum : " + bst.findMaxValue());
     }
 }

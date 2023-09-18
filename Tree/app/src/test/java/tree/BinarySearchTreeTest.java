@@ -61,4 +61,20 @@ public class BinarySearchTreeTest {
         preOrderExpected.add(22);
         assertArrayEquals(preOrderExpected.toArray(),bst.preOrderTraverse(bst.getRoot(),new ArrayList<>()).toArray());
     }
+    @Test
+    public void givenATree_WithNoNodes_findMaxShouldReturnNull(){
+        BinarySearchTree<Integer> bst = new BinarySearchTree<>();
+        assertNull(bst.findMaxValue());
+    }@Test
+    public void givenATree_findMaxShouldReturnMaximum(){
+        BinarySearchTree<Integer> bst = new BinarySearchTree<>();
+        bst.add(45);
+        bst.add(235);
+        bst.add(5);
+        bst.add(40);
+        bst.add(89);
+        bst.add(1234);
+        bst.add(0);
+        assertEquals(1234,bst.findMaxValue());
+    }
 }
