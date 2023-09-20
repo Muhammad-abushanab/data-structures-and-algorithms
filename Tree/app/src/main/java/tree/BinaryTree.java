@@ -1,6 +1,8 @@
 package tree;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.Queue;
 
 public class BinaryTree<T extends Comparable<T>> {
     protected Node<T> root;
@@ -64,6 +66,30 @@ public class BinaryTree<T extends Comparable<T>> {
             maxValue = rightMax;
 
         return maxValue;
+    }
+    public ArrayList<T> breadthFirst() {
+        ArrayList<T> traversal = new ArrayList<>();
+        if (root == null) {
+            return traversal;
+        }
+
+        Queue<Node<T>> queue = new LinkedList<>();
+        queue.offer(root);
+
+        while (!queue.isEmpty()) {
+            Node<T> currentNode = queue.poll();
+            traversal.add(currentNode.value);
+
+            if (currentNode.leftChild != null) {
+                queue.offer(currentNode.leftChild);
+            }
+
+            if (currentNode.rightChild != null) {
+                queue.offer(currentNode.rightChild);
+            }
+        }
+
+        return traversal;
     }
 
 

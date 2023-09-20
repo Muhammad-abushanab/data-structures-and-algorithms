@@ -27,5 +27,6 @@ public class App {
         travel.clear();
         System.out.println(" In Order : " + bst.inOrderTraverse(bst.getRoot(),travel).toString()); // left >> root >> right
         System.out.println("Maximum : " + bst.findMaxValue());
+        System.out.println("BFS : " + bst.breadthFirst());
     }
 }
