@@ -77,4 +77,29 @@ public class BinarySearchTreeTest {
         bst.add(0);
         assertEquals(1234,bst.findMaxValue());
     }
+    @Test
+    public void givenATree_TraversUsingBFS(){
+        BinarySearchTree<Integer> bst = new BinarySearchTree<>();
+        bst.add(45); // root lvl 1
+        bst.add(235); //right child of 45 lvl 2
+        bst.add(5); // left child of 45 lvl 2
+        bst.add(40); // right child of 5 lvl 3
+        bst.add(89); // left child of 235 lvl 3
+        bst.add(1234); // right child of 1234 lvl 3
+        bst.add(0); // lef child of 5 lvl 3
+        ArrayList<Integer> bstExpected = new ArrayList<>();
+        bstExpected.add(45);
+        bstExpected.add(5);
+        bstExpected.add(235);
+        bstExpected.add(0);
+        bstExpected.add(40);
+        bstExpected.add(89);
+        bstExpected.add(1234);
+        assertEquals(bstExpected, bst.breadthFirst());
+
+        // Test when tree is empty
+        BinarySearchTree<Integer> bst2 = new BinarySearchTree<>();
+        bstExpected.clear();
+        assertEquals(bstExpected, bst2.breadthFirst());
+    }
 }
