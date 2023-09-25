@@ -16,6 +16,6 @@
 |Valid Bracket         | [Valid Bracket](./Stack-Queue/ValidBracket.md)
 |Tree         | [Tree](./Tree/BinaryTree.md)
 |Tree max        | [Tree](./Tree/Tree-max.md)
-|Breadth First Search        | [BFS](./Tree/BFS.md)
-
+|Breadth First Search        | [BFS](./Tree/BFS.md)`
+|K array tree        | [BFS](./Tree/k-ary-tree.md)`
 

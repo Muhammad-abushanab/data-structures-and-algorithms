@@ -3,30 +3,85 @@
  */
 package tree;
 
+import tree.KaryTree.KaryTree;
+import tree.KaryTree.Node;
+
 import java.util.ArrayList;
 
 public class App {
 
     public static void main(String[] args) {
-        BinarySearchTree<Integer> bst = new BinarySearchTree<>();
-        bst.add(5); // root
-        bst.add(4); // left child
-        bst.add(9); // right child
-        bst.add(3); // left of 4
-        bst.add(15);// right of 9
-        bst.add(22); // right of 22
-        bst.add(19); // left of 22
-        bst.add(18); // left of 19
-        bst.add(8); // left of 9
-        ArrayList<Integer> travel = new ArrayList<>();
-//        System.out.println(bst.inOrderTraverse(bst.getRoot(),travel).toString()); // in order left >> root >> right >> output should be  >> [6,10,22,45,65]
-        System.out.println(" Pre Order : " + bst.preOrderTraverse(bst.getRoot(),travel).toString());
-        travel.clear();
-        System.out.println(" Post Order : " + bst.postOrderTraverse(bst.getRoot(),travel).toString()); // left >> right >> root
-//        System.out.println(bst.postOrderTraverse(bst.getRoot(),travel).toString());
-        travel.clear();
-        System.out.println(" In Order : " + bst.inOrderTraverse(bst.getRoot(),travel).toString()); // left >> root >> right
-        System.out.println("Maximum : " + bst.findMaxValue());
-        System.out.println("BFS : " + bst.breadthFirst());
+//        BinarySearchTree<Integer> bst = new BinarySearchTree<>();
+//        bst.add(5); // root
+//        bst.add(4); // left child
+//        bst.add(9); // right child
+//        bst.add(3); // left of 4
+//        bst.add(15);// right of 9
+//        bst.add(22); // right of 22
+//        bst.add(19); // left of 22
+//        bst.add(18); // left of 19
+//        bst.add(8); // left of 9
+//        ArrayList<Integer> travel = new ArrayList<>();
+////        System.out.println(bst.inOrderTraverse(bst.getRoot(),travel).toString()); // in order left >> root >> right >> output should be  >> [6,10,22,45,65]
+//        System.out.println(" Pre Order : " + bst.preOrderTraverse(bst.getRoot(),travel).toString());
+//        travel.clear();
+//        System.out.println(" Post Order : " + bst.postOrderTraverse(bst.getRoot(),travel).toString()); // left >> right >> root
+////        System.out.println(bst.postOrderTraverse(bst.getRoot(),travel).toString());
+//        travel.clear();
+//        System.out.println(" In Order : " + bst.inOrderTraverse(bst.getRoot(),travel).toString()); // left >> root >> right
+//        System.out.println("Maximum : " + bst.findMaxValue());
+//        System.out.println("BFS : " + bst.breadthFirst());
+//        Node<Integer> root = new Node<>(15);
+//        Node<Integer> ch1 = new Node<>(5);
+//        Node<Integer> ch2 = new Node<>(35);
+//        Node<Integer> ch3 = new Node<>(3);
+//
+//        root.getChildren().add(ch1);
+//        root.getChildren().add(ch2);
+//        root.getChildren().add(ch3);
+//
+//        Node<Integer> grandCh1 = new Node<>(9);
+//        Node<Integer> grandCh2 = new Node<>(20);
+//
+//        ch1.getChildren().add(grandCh1);
+//        ch3.getChildren().add(grandCh2);
+//
+//        KaryTree<Integer> tree = new KaryTree<>(root.getValue());
+//        tree.getRoot().getChildren().addAll(root.getChildren());
+//
+//        KaryTree<String> fizzBuzzTree = new KaryTree<>("FizzBuzz");
+        Node<Integer> root = new Node<>(15);
+        Node<Integer> child1 = new Node<>(3);
+        Node<Integer> child2 = new Node<>(5);
+        Node<Integer> child3 = new Node<>(10);
+
+        root.getChildren().add(child1);
+        root.getChildren().add(child2);
+        root.getChildren().add(child3);
+
+        Node<Integer> grandChild1 = new Node<>(9);
+        Node<Integer> grandChild2 = new Node<>(20);
+
+        child1.getChildren().add(grandChild1);
+        child3.getChildren().add(grandChild2);
+
+        KaryTree<Integer> originalTree = new KaryTree<>(root.getValue());
+        originalTree.getRoot().getChildren().addAll(root.getChildren());
+
+        KaryTree<String> fizzBuzzTree = new KaryTree<>("FizzBuzz");
+        Node<Integer> originalRoot = originalTree.getRoot();
+
+        for (Node<Integer> child : originalRoot.getChildren()) {
+            Node<String> fizzBuzzChild = fizzBuzzTree.fizzBuzTree(child);
+            fizzBuzzTree.getRoot().getChildren().add(fizzBuzzChild);
+        }
+
+        System.out.println("Original Tree (postorder):");
+        originalTree.postorder(originalTree.getRoot());
+        System.out.println();
+
+        System.out.println("FizzBuzz Tree (postorder):");
+        fizzBuzzTree.postorder(fizzBuzzTree.getRoot());
+
     }
 }
