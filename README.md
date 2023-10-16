@@ -15,7 +15,7 @@
 |Animal shelter         | [Animal shelter](./Stack-Queue/AnimalShelter.md)
 |Valid Bracket         | [Valid Bracket](./Stack-Queue/ValidBracket.md)
 |Tree         | [Tree](./Tree/BinaryTree.md)
-|Tree max        | [Tree](./Tree/Tree-max.md)
-|Breadth First Search        | [BFS](./Tree/BFS.md)`
-|K array tree        | [BFS](./Tree/k-ary-tree.md)`
-
+|Tree max        | [Tree max](./Tree/Tree-max.md)
+|Breadth First Search        | [BFS](./Tree/BFS.md)
+|K array tree        | [k ary tree](./Tree/k-ary-tree.md)
+|InsertionSort        | [InsertionSort](./insertionSort/insertionSort.md)
