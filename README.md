@@ -20,3 +20,4 @@
 | K array tree          |              [k ary tree](./Tree/k-ary-tree.md)              |
 | InsertionSort         |      [InsertionSort](./insertionSort/insertionSort.md)       |
 | MergeSort             |            [MergeSort](./mergeSort/mergeSort.md)             |
+| Sort                  |                    [Sort](./sort/sort.md)                    |
