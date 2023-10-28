@@ -21,3 +21,4 @@
 | InsertionSort         |      [InsertionSort](./insertionSort/insertionSort.md)       |
 | MergeSort             |            [MergeSort](./mergeSort/mergeSort.md)             |
 | Sort                  |                    [Sort](./sort/sort.md)                    |
+| Hash Table            |            [HashTable](./hashTable/hashTable.md)             |
