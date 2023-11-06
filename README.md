@@ -22,3 +22,4 @@
 | MergeSort             |            [MergeSort](./mergeSort/mergeSort.md)             |
 | Sort                  |                    [Sort](./sort/sort.md)                    |
 | Hash Table            |            [HashTable](./hashTable/hashTable.md)             |
+| Repeated Word         |         [RepeatedWord](./hashTable/repeatedWord.md)          |
