@@ -5,6 +5,9 @@ package hashTable;
 
 import hashTable.Classes.Movie;
 import hashTable.Classes.RepeatedWordFinder;
+import hashTable.TreeIntersection.BinaryTree;
+import hashTable.TreeIntersection.Node;
+import hashTable.TreeIntersection.TreeInterSection;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -48,5 +51,28 @@ public class App {
         } else {
             System.out.println("No repeated word found.");
         }
+
+        BinaryTree binaryTree1 = new BinaryTree();
+        BinaryTree binaryTree2 = new BinaryTree();
+
+        // adds nodes to the tree
+        binaryTree1.setRoot(new Node(1));
+        binaryTree1.getRoot().setLeft(new Node(2));
+        binaryTree1.getRoot().setRight(new Node(41));
+        binaryTree1.getRoot().getRight().setLeft(new Node(10));
+        binaryTree1.getRoot().getRight().setRight(new Node(41));
+        binaryTree1.getRoot().getLeft().setLeft(new Node(4));
+        binaryTree1.getRoot().getLeft().setRight(new Node(8));
+
+        binaryTree2.setRoot(new Node(9));
+        binaryTree2.getRoot().setLeft(new Node(1));
+        binaryTree2.getRoot().setRight(new Node(8));
+        binaryTree2.getRoot().getRight().setLeft(new Node(107));
+        binaryTree2.getRoot().getRight().setRight(new Node(21));
+        binaryTree2.getRoot().getLeft().setLeft(new Node(41));
+        binaryTree2.getRoot().getLeft().setRight(new Node(7));
+
+        TreeInterSection interSection = new TreeInterSection();
+        System.out.println(interSection.treeIntersection(binaryTree1,binaryTree2));
     }
 }

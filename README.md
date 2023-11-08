@@ -23,3 +23,4 @@
 | Sort                  |                    [Sort](./sort/sort.md)                    |
 | Hash Table            |            [HashTable](./hashTable/hashTable.md)             |
 | Repeated Word         |         [RepeatedWord](./hashTable/repeatedWord.md)          |
+| Tree InterSection         |         [tree_InterSection](./hashTable/TreeInterSection.md)          |
