@@ -3,6 +3,7 @@
  */
 package hashTable;
 
+import hashTable.Classes.LeftJoin;
 import hashTable.Classes.Movie;
 import hashTable.Classes.RepeatedWordFinder;
 import hashTable.TreeIntersection.BinaryTree;
@@ -12,6 +13,8 @@ import hashTable.TreeIntersection.TreeInterSection;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
 
 import static hashTable.Classes.RepeatedWordFinder.findFirstRepeatedWord;
 
@@ -74,5 +77,28 @@ public class App {
 
         TreeInterSection interSection = new TreeInterSection();
         System.out.println(interSection.treeIntersection(binaryTree1,binaryTree2));
+
+
+        HashMap<String, String> synonyms = new HashMap<>();
+        synonyms.put("diligent", "employed");
+        synonyms.put("fond", "enamored");
+        synonyms.put("guide", "usher");
+        synonyms.put("outfit", "garb");
+        synonyms.put("wrath", "anger");
+
+        HashMap<String, String> antonyms = new HashMap<>();
+        antonyms.put("diligent", "idle");
+        antonyms.put("fond", "averse");
+        antonyms.put("guide", "follow");
+        antonyms.put("flow", "jam");
+        antonyms.put("wrath", "delight");
+
+        HashMap<String, String[]> res = LeftJoin.leftJoin(synonyms, antonyms);
+
+        for (String key : res.keySet()) {
+            String[] values = res.get(key);
+            System.out.println(key + " " + Arrays.toString(values));
+        }
+
     }
 }
