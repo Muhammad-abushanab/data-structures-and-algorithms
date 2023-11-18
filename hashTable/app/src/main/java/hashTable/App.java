@@ -4,6 +4,7 @@
 package hashTable;
 
 import hashTable.Classes.LeftJoin;
+import hashTable.Classes.MostWordInA_Book;
 import hashTable.Classes.Movie;
 import hashTable.Classes.RepeatedWordFinder;
 import hashTable.TreeIntersection.BinaryTree;
@@ -99,6 +100,7 @@ public class App {
             String[] values = res.get(key);
             System.out.println(key + " " + Arrays.toString(values));
         }
-
+        MostWordInA_Book book = new MostWordInA_Book("");
+        System.out.println(book.mostWordInABook());
     }
 }
