@@ -4,11 +4,14 @@
 package graph;
 
 import org.junit.jupiter.api.Test;
+
+import java.util.List;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
     @Test
-    public void addNode(){
+    public void addNode() {
         Graph graph = new Graph();
 
         graph.addVertex("Mohammad");
@@ -20,13 +23,13 @@ class AppTest {
     }
 
     @Test
-    public void addEdge(){
+    public void addEdge() {
         Graph graph = new Graph();
 
         graph.addVertex("Mohammad");
         graph.addVertex("Mohammad2");
 
-        graph.addEdge("Mohammad","Mohammad2");
+        graph.addEdge("Mohammad", "Mohammad2");
 
         assertNotNull(graph.getVertices());
         assertEquals(2, graph.getVertices().size());
@@ -35,7 +38,7 @@ class AppTest {
     }
 
     @Test
-    public void allNodes(){
+    public void allNodes() {
         Graph graph = new Graph();
 
         graph.addVertex("Mohammad");
@@ -50,13 +53,13 @@ class AppTest {
     }
 
     @Test
-    public void nodeNeighbors(){
+    public void nodeNeighbors() {
         Graph graph = new Graph();
 
         graph.addVertex("Mohammad");
         graph.addVertex("Mohammad2");
 
-        graph.addEdge("Mohammad","Mohammad2");
+        graph.addEdge("Mohammad", "Mohammad2");
 
         assertEquals(1, graph.getNeighbors("Mohammad").size());
         assertTrue(graph.getNeighbors("Mohammad").contains(new Vertex("Mohammad2")));
@@ -64,15 +67,15 @@ class AppTest {
     }
 
     @Test
-    public void nodeNeighborsWeight(){
+    public void nodeNeighborsWeight() {
         Graph graph = new Graph();
 
         graph.addVertex("Mohammad");
         graph.addVertex("Mohammad2");
         graph.addVertex("Mohammad3");
 
-        graph.addEdge("Mohammad","Mohammad2",3);
-        graph.addEdge("Mohammad","Mohammad3",2);
+        graph.addEdge("Mohammad", "Mohammad2", 3);
+        graph.addEdge("Mohammad", "Mohammad3", 2);
 
         assertEquals(2, graph.getNeighbors("Mohammad").size());
         assertEquals(3, graph.getNeighbors("Mohammad").get(0).weight);
@@ -80,23 +83,43 @@ class AppTest {
     }
 
     @Test
-    public void emptyGraph(){
+    public void emptyGraph() {
         Graph graph = new Graph();
 
         assertNull(graph.getNeighbors("Mohammad"));
     }
 
     @Test
-    public void oneNodeOneEdge(){
+    public void oneNodeOneEdge() {
         Graph graph = new Graph();
         graph.addVertex("Mohammad");
-        graph.addEdge("Mohammad","Mohammad");
+        graph.addEdge("Mohammad", "Mohammad");
 
         System.out.println(graph.getNeighbors("Mohammad"));
 
         assertEquals(2, graph.getNeighbors("Mohammad").size());
-        assertTrue( graph.getNeighbors("Mohammad").contains(new Vertex("Mohammad")));
+        assertTrue(graph.getNeighbors("Mohammad").contains(new Vertex("Mohammad")));
         assertEquals(1, graph.getVertices().size());
 
+    }
+
+    @Test
+    public void breadthFirstTraversal() {
+        Graph testGraph = new Graph();
+        Vertex v1 = testGraph.addVertex("A");
+        testGraph.addVertex("B");
+        testGraph.addVertex("C");
+        testGraph.addVertex("D");
+        testGraph.addEdge("A", "B");
+        testGraph.addEdge("A", "C");
+        testGraph.addEdge("B", "D");
+        testGraph.addEdge("C", "D");
+        assertEquals(4, testGraph.size());
+        assertEquals(4, testGraph.getVertices().size());
+        List<Vertex> bfsResult = testGraph.breadthFirst(v1);
+        assertEquals("A", bfsResult.get(0).label);
+        assertEquals("B", bfsResult.get(1).label);
+        assertEquals("C", bfsResult.get(2).label);
+        assertEquals("D", bfsResult.get(3).label);
     }
 }
