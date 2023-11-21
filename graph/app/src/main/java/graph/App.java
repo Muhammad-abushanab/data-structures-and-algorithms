@@ -3,6 +3,8 @@
  */
 package graph;
 
+import java.util.List;
+
 public class App {
 
     public static void main(String[] args) {
@@ -23,5 +25,24 @@ public class App {
         System.out.println(graph.size());
         System.out.println(graph.getNeighbors("Yousef"));
         System.out.println();
+
+
+        Graph towersGraph = new Graph();
+
+        Vertex eiffelTower = towersGraph.addVertex("Eiffel Tower");
+         towersGraph.addVertex("CN Tower");
+         towersGraph.addVertex("Empire State Building");
+         towersGraph.addVertex("Burj Khalifa");
+         towersGraph.addVertex("Space Needle");
+
+        towersGraph.addEdge("Eiffel Tower", "CN Tower");
+        towersGraph.addEdge("Eiffel Tower", "Empire State Building");
+        towersGraph.addEdge("CN Tower", "Burj Khalifa");
+        towersGraph.addEdge("Empire State Building", "Space Needle");
+        towersGraph.addEdge("Burj Khalifa", "Space Needle");
+
+        System.out.println("Breadth-First Traversal:");
+        List<Vertex> bfsResult = towersGraph.breadthFirst(eiffelTower);
+        towersGraph.displayCollection(bfsResult);
     }
 }

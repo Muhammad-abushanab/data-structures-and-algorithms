@@ -25,15 +25,19 @@ public class Graph {
         adjVertices.get(vertex2).add(vertex1);
     }
     public void addEdge(String label1, String label2, int weight) {
+        Vertex vertex1 = new Vertex(label1);
+        Vertex vertex2 = new Vertex(label2);
+
+        adjVertices.putIfAbsent(vertex1, new ArrayList<>());
+        adjVertices.putIfAbsent(vertex2, new ArrayList<>());
+
         Vertex wVertex1 = new Vertex(label1, weight);
         Vertex wVertex2 = new Vertex(label2, weight);
-
-        Vertex vertex1 = new Vertex(label1, weight);
-        Vertex vertex2 = new Vertex(label2, weight);
 
         adjVertices.get(vertex1).add(wVertex2);
         adjVertices.get(vertex2).add(wVertex1);
     }
+
 
     public void removeVertex(String label) {
         Vertex vertex = new Vertex(label);
@@ -76,6 +80,35 @@ public class Graph {
             stringBuilder.append(adjVertices.get(vertex));
         }
         return stringBuilder.toString();
+    }
+    public List<Vertex> breadthFirst(Vertex start) {
+        List<Vertex> visited = new ArrayList<>();
+        Queue<Vertex> queue = new LinkedList<>();
+        queue.add(start);
+        visited.add(start);
+
+        while (!queue.isEmpty()) {
+            Vertex current = queue.poll();
+            List<Vertex> neighbors = adjVertices.get(current);
+
+            if (neighbors != null) {
+                for (Vertex neighbor : neighbors) {
+                    if (!visited.contains(neighbor)) {
+                        visited.add(neighbor);
+                        queue.add(neighbor);
+                    }
+                }
+            }
+        }
+
+        return visited;
+    }
+
+    public void displayCollection(Collection<Vertex> collection) {
+        for (Vertex vertex : collection) {
+            System.out.print(vertex.label + " ");
+        }
+        System.out.println();
     }
 
 }
