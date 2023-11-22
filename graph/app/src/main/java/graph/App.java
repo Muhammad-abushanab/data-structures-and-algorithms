@@ -3,6 +3,8 @@
  */
 package graph;
 
+import java.util.List;
+
 public class App {
 
     public static void main(String[] args) {
@@ -23,7 +25,6 @@ public class App {
         System.out.println(graph.size());
         System.out.println(graph.getNeighbors("Yousef"));
         System.out.println();
-
         Graph citiesGraph = new Graph();
         citiesGraph.addVertex("London");
         citiesGraph.addVertex("Paris");
@@ -43,7 +44,6 @@ public class App {
         String[] trip3 = {"Berlin"};
         Integer cost3 = tripCalculator.businessTrip(citiesGraph, trip3);
         System.out.println("Cost of trip 3: " + cost3);
-
 
     }
 }

@@ -27,3 +27,4 @@
 | Left Join             |             [Left join](./hashTable/leftJoin.md)             |
 | Graph                 |                  [Graph](./graph/graph.md)                   |
 | Business Trip          |           [Business Trip](./graph/busniessTrip.md)           |
+| Graph Bredth Traversal             |             [Graph Breadth](./graph/graphBreadth.md)             |
