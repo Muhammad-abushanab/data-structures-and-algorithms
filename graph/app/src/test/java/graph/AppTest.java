@@ -99,4 +99,53 @@ class AppTest {
         assertEquals(1, graph.getVertices().size());
 
     }
+
+    @Test
+    public void testValidTripWithCost() {
+        Graph citiesGraph = new Graph();
+        citiesGraph.addVertex("London");
+        citiesGraph.addVertex("Paris");
+        citiesGraph.addVertex("Berlin");
+        citiesGraph.addVertex("Rome");
+
+        citiesGraph.addEdge("London", "Paris", 50);
+        citiesGraph.addEdge("Paris", "Berlin", 40);
+        citiesGraph.addEdge("Berlin", "Rome", 30);
+
+        BusinessCalculator calculator = new BusinessCalculator();
+        String[] trip = {"London", "Paris", "Berlin", "Rome"};
+        Integer cost = calculator.businessTrip(citiesGraph, trip);
+        assertEquals(Integer.valueOf(120), cost);
+    }
+
+    @Test
+    public void testInvalidTripNoConnection() {
+        Graph citiesGraph = new Graph();
+        citiesGraph.addVertex("London");
+        citiesGraph.addVertex("Paris");
+        citiesGraph.addVertex("Berlin");
+        citiesGraph.addVertex("Rome");
+
+        citiesGraph.addEdge("London", "Paris", 50);
+        citiesGraph.addEdge("Berlin", "Rome", 30);
+
+        BusinessCalculator calculator = new BusinessCalculator();
+        String[] trip = {"London", "Rome"};
+        Integer cost = calculator.businessTrip(citiesGraph, trip);
+        assertEquals(null, cost);
+    }
+
+    @Test
+    public void testInvalidTripInsufficientCities() {
+        Graph citiesGraph = new Graph();
+        citiesGraph.addVertex("London");
+        citiesGraph.addVertex("Paris");
+        citiesGraph.addVertex("Berlin");
+        citiesGraph.addVertex("Rome");
+
+        BusinessCalculator calculator = new BusinessCalculator();
+        String[] trip = {"Berlin"};
+        Integer cost = calculator.businessTrip(citiesGraph, trip);
+        assertEquals(null, cost);
+    }
 }
