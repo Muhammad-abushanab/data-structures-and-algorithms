@@ -25,24 +25,25 @@ public class App {
         System.out.println(graph.size());
         System.out.println(graph.getNeighbors("Yousef"));
         System.out.println();
+        Graph citiesGraph = new Graph();
+        citiesGraph.addVertex("London");
+        citiesGraph.addVertex("Paris");
+        citiesGraph.addVertex("Berlin");
+        citiesGraph.addVertex("Rome");
+        citiesGraph.addEdge("London", "Paris", 50);
+        citiesGraph.addEdge("Paris", "Berlin", 40);
+        citiesGraph.addEdge("Berlin", "Rome", 30);
 
+        BusinessCalculator tripCalculator = new BusinessCalculator();
+        String[] trip1 = {"London", "Paris", "Berlin", "Rome"};
+        Integer cost1 = tripCalculator.businessTrip(citiesGraph, trip1);
+        System.out.println("Cost of trip 1: " + cost1);
+        String[] trip2 = {"London", "Rome"};
+        Integer cost2 = tripCalculator.businessTrip(citiesGraph, trip2);
+        System.out.println("Cost of trip 2: " + cost2);
+        String[] trip3 = {"Berlin"};
+        Integer cost3 = tripCalculator.businessTrip(citiesGraph, trip3);
+        System.out.println("Cost of trip 3: " + cost3);
 
-        Graph towersGraph = new Graph();
-
-        Vertex eiffelTower = towersGraph.addVertex("Eiffel Tower");
-         towersGraph.addVertex("CN Tower");
-         towersGraph.addVertex("Empire State Building");
-         towersGraph.addVertex("Burj Khalifa");
-         towersGraph.addVertex("Space Needle");
-
-        towersGraph.addEdge("Eiffel Tower", "CN Tower");
-        towersGraph.addEdge("Eiffel Tower", "Empire State Building");
-        towersGraph.addEdge("CN Tower", "Burj Khalifa");
-        towersGraph.addEdge("Empire State Building", "Space Needle");
-        towersGraph.addEdge("Burj Khalifa", "Space Needle");
-
-        System.out.println("Breadth-First Traversal:");
-        List<Vertex> bfsResult = towersGraph.breadthFirst(eiffelTower);
-        towersGraph.displayCollection(bfsResult);
     }
 }

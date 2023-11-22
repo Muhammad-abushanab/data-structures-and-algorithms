@@ -25,5 +25,6 @@
 | Repeated Word         |         [RepeatedWord](./hashTable/repeatedWord.md)          |
 | Tree InterSection     |     [tree_InterSection](./hashTable/TreeInterSection.md)     |
 | Left Join             |             [Left join](./hashTable/leftJoin.md)             |
-| Graph             |             [Graph](./graph/graph.md)             |
+| Graph                 |                  [Graph](./graph/graph.md)                   |
+| Business Trip          |           [Business Trip](./graph/busniessTrip.md)           |
 | Graph Bredth Traversal             |             [Graph Breadth](./graph/graphBreadth.md)             |
