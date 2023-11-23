@@ -5,10 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d05a1643-c553-489c-a4e7-b54a8dca6dd4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/graph/.idea/uiDesigner.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graph/app/src/main/java/graph/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/graph/app/src/main/java/graph/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graph/app/src/test/java/graph/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/graph/app/src/test/java/graph/AppTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graph/app/bin/main/graph/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/graph/app/bin/main/graph/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graph/app/bin/main/graph/Graph.class" beforeDir="false" afterPath="$PROJECT_DIR$/graph/app/bin/main/graph/Graph.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graph/app/bin/test/graph/AppTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/graph/app/bin/test/graph/AppTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hashTable/app/bin/main/hashTable/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/hashTable/app/bin/main/hashTable/App.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,13 +29,13 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "graph"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;graph&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">

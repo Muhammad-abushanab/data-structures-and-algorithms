@@ -150,7 +150,9 @@ class AppTest {
         String[] trip = {"Berlin"};
         Integer cost = calculator.businessTrip(citiesGraph, trip);
         assertEquals(null, cost);
-    public void breadthFirstTraversal() {
+
+    }
+    public void breadthFirstTraversal () {
         Graph testGraph = new Graph();
         Vertex v1 = testGraph.addVertex("A");
         testGraph.addVertex("B");
