@@ -3,7 +3,7 @@ This is a simple implementation of a graph Depth in Java.
 
 ## whiteBoard
 
-![Graph](./graphDepth.PNG)
+![Graph](./graphdepth.PNG)
 
 ## Approach & Efficiency
 The approach used is to push the root into the stack and start to check
