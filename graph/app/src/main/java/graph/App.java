@@ -45,5 +45,7 @@ public class App {
         Integer cost3 = tripCalculator.businessTrip(citiesGraph, trip3);
         System.out.println("Cost of trip 3: " + cost3);
 
+        System.out.println(citiesGraph.depthFirstTraverse("London"));
+
     }
 }
